@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+The flickr Gallery App
+______________________
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+The flickr gallery app is a React application that is used to retrieve images from flickr and paint them to a view for the user in a grid format. The solution uses a single view in App js that calls upon an individual image component in a map function to paint multiple images. 
 
-In the project directory, you can run:
+Methods to make a fetch call to retrieve the images, handle scroll for updates and getting the size in bytes are abstracted away from the main application components to allow for reusability and use coupling of functionalities. The gallery itself uses a simple css to display the images in an appealing way regardless of their sizing. And onclick it allows for the user to focus on the single image and see extra meta data related specifically to that image.
 
-### `npm start`
+Functions handleUpdate and doUpdate are seperated as to avoid repeting code and allow for the main view to be updated from different components in the future if necessary. The same can be said for the ImageComponent as making it a component allows for us to use the imageComponent for the single enlarged view as well.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+There weren't too made trade-offs that had to be made due to the limited functionality of this app but if I were to improve it I would add an interactive load more button that would present a spinning wheel as the fetch request was running. I would consider adding different views to accomodate for users preferences that would be controlled via state and simple css rules. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+One important thing I would do is also set the live image to have its own state and not be determined by an index in the images array in state. By having its own state it would not change whenever the application fetches more images.
 
-### `npm test`
+Higher level additions include:
+- an algorithm API to remove undesirable images from the view.
+- functionality to grab the width of an image and center it while ensuring that its height does not venture past the screen. Centering images by width and height in the center of screen
+- an ability to select the page you want to view
+- option to choose the amount of images to display per fetch
+- throttling ability to throttle fetch requests to the server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

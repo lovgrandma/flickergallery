@@ -1,0 +1,51 @@
+img {
+    width: -webkit-fill-available;
+    display: block;
+}
+
+.img-container {
+    margin-bottom: 0.7em;
+}
+
+.img-individual {
+    cursor: pointer;
+}
+
+.close-img {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: black;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-weight: 600;
+    line-height: 1.25;
+    transition: 200ms;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.close-img:hover {
+    background: grey;
+}
+
+.w-h, .mem {
+    position: absolute;
+    color: white;
+    background: black;
+    padding: 2.5px;
+    border-radius: 2.5px;
+}
+
+.w-h {
+    left: 15px;
+    top: 15px;
+    font-size: 0.8em;
+}
+
+.mem {
+    font-size: 0.7em;
+    left: 15px;
+    top: 40px;
+}
