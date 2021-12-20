@@ -2,6 +2,13 @@ The flickr Gallery App
 ______________________
 
 
+running application
+__________________
+
+1. npm run build
+2. npm start
+
+
 The flickr gallery app is a React application that is used to retrieve images from flickr and paint them to a view for the user in a grid format. The solution uses a single view in App js that calls upon an individual image component in a map function to paint multiple images. 
 
 Methods to make a fetch call to retrieve the images, handle scroll for updates and getting the size in bytes are abstracted away from the main application components to allow for reusability and use coupling of functionalities. The gallery itself uses a simple css to display the images in an appealing way regardless of their sizing. And onclick it allows for the user to focus on the single image and see extra meta data related specifically to that image.
