@@ -1,6 +1,7 @@
 The flickr Gallery App
 ______________________
 
+*NOTICE: This was a submission for a Canadian Software Media Entertainment company and is not used in any current projects*
 
 running application
 __________________
